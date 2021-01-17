@@ -199,6 +199,7 @@ img {
 }
 
 #about {
+  // About A
   &-a {
     .about-info {
       display: -ms-grid;
@@ -255,6 +256,99 @@ img {
     .award-3 .fas {
       color: $main-color;
       margin: 1rem;
+    }
+  }
+  // About B
+  &-b {
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+      div {
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background-color: $main-color;
+      }
+    }
+  }
+  &-c {
+    .about-logos {
+      display: grid;
+      display: -ms-grid;
+      grid-template-columns: repeat(4, 1fr);
+      -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr 2rem 1fr;
+      row-gap: 2rem;
+      column-gap: 2rem;
+      justify-content: center;
+
+      img {
+        &:nth-child(1) {
+          -ms-grid-column: 1;
+          grid-column: 1;
+        }
+        &:nth-child(2) {
+          -ms-grid-column: 3;
+          grid-column: 2;
+        }
+        &:nth-child(3) {
+          -ms-grid-column: 5;
+          grid-column: 3;
+        }
+        &:nth-child(4) {
+          -ms-grid-column: 7;
+          grid-column: 4;
+        }
+      }
+    }
+  }
+  &-d {
+    .testimonials {
+      display: grid;
+      display: -ms-grid;
+      grid-template-columns: repeat(4, 1fr);
+      -ms-grid-columns: 1fr 0.5rem 1fr 0.5rem 1fr 0.5rem 1fr;
+      column-gap: 0.5rem;
+      row-gap: 0.5rem;
+
+      div {
+        &:nth-child(1) {
+          -ms-grid-column: 1;
+          grid-column: 1;
+        }
+        &:nth-child(2) {
+          -ms-grid-column: 3;
+          grid-column: 2;
+        }
+        &:nth-child(3) {
+          -ms-grid-column: 5;
+          grid-column: 3;
+        }
+        &:nth-child(4) {
+          -ms-grid-column: 7;
+          grid-column: 4;
+        }
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+      p {
+        border: 1px solid $medium-color;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
     }
   }
 }
