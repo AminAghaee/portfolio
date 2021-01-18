@@ -435,6 +435,52 @@ img {
     border-radius: 50%;
     margin-right: 0.5rem; }
 
+#contact-a .text-fields {
+  display: grid;
+  display: -ms-grid;
+  grid-template-areas: "name email" "subject phone" "message message";
+  column-gap: 1.2rem;
+  row-gap: 1.2rem;
+  margin: 1.2rem;
+  -ms-grid-columns: 1fr 1.2rem 1fr;
+  -ms-grid-rows: 100% 1.2rem 100% 1.2rem 100%; }
+  #contact-a .text-fields .name-input {
+    grid-area: name;
+    -ms-grid-column: 1; }
+  #contact-a .text-fields .subject-input {
+    grid-area: subject;
+    -ms-grid-column: 1;
+    -ms-grid-row: 3; }
+  #contact-a .text-fields .email-input {
+    grid-area: email;
+    -ms-grid-column: 3; }
+  #contact-a .text-fields .phone-input {
+    grid-area: phone;
+    -ms-grid-column: 3;
+    -ms-grid-row: 3; }
+  #contact-a .text-fields .message-input {
+    grid-area: message;
+    height: 100px;
+    -ms-grid-column: 1;
+    -ms-grid-row: 5;
+    -ms-grid-column-span: 3; }
+  #contact-a .text-fields .text-input {
+    padding: 0.5rem 1rem; }
+
+#contact-a button[type="submit"] {
+  width: 50%; }
+
+#contact-b .contact-info {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center; }
+  #contact-b .contact-info div {
+    width: 33.3%; }
+
+#contact-c h1 {
+  text-align: center;
+  font-size: 4rem; }
+
 #main-footer {
   background: #333;
   color: #fff;
