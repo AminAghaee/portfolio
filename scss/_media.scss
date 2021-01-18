@@ -1,0 +1,240 @@
+// Tablets and Smaller
+@media (max-width: 800px) {
+  #header-home {
+    height: 30rem;
+    .header-content {
+      padding-top: 5rem;
+    }
+  }
+}
+// Smartphones
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: 3px solid $main-color;
+      background-position: 20% 30%;
+
+      .header-content {
+        display: none;
+      }
+    }
+    &-inner {
+      height: 10rem;
+    }
+  }
+
+  // Stack Grid Columns and Flex Columns
+
+  // Home
+  #home {
+    &-a .specials {
+      flex-direction: column;
+      height: 100%;
+      margin: -1rem 0;
+
+      div {
+        width: 100%;
+        border-bottom: 1px $light-color solid;
+        padding: 1rem 0;
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+
+    &-b .stats {
+      flex-direction: column;
+      div {
+        width: 100%;
+        padding: 2rem 0 1rem 0;
+      }
+    }
+    &-c .process {
+      grid-template-columns: 1fr;
+      -ms-grid-columns: 1fr;
+      div {
+        &:nth-child(1) {
+          -ms-grid-column: 1;
+        }
+        &:nth-child(2) {
+          -ms-grid-column: 1;
+          -ms-grid-row: 2;
+        }
+        &:nth-child(3) {
+          -ms-grid-column: 1;
+          -ms-grid-row: 3;
+        }
+        &:nth-child(4) {
+          -ms-grid-column: 1;
+          -ms-grid-row: 4;
+        }
+      }
+    }
+  }
+
+  // About
+
+  #about {
+    &-a {
+      .about-info {
+        grid-template-columns: 1fr;
+        -ms-grid-rows: 100% 1.2rem 100% 1.2rem 100% 1.2rem 100% 1.2rem 100%;
+        -ms-grid-columns: 1fr;
+      }
+
+      .bio-image {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+      }
+
+      .bio {
+        grid-column: 1;
+        grid-row: 2;
+        border: 0;
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+      }
+
+      .award-1 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+      }
+      .award-2 {
+        -ms-grid-row: 7;
+        -ms-grid-column: 1;
+      }
+      .award-3 {
+        -ms-grid-row: 9;
+        -ms-grid-column: 1;
+      }
+    }
+    &-c {
+      display: none;
+    }
+
+    &-d .testimonials {
+      grid-template-columns: 1fr;
+      -ms-grid-columns: 1fr;
+
+      div {
+        &:nth-child(1) {
+          -ms-grid-column: 1;
+        }
+        &:nth-child(2) {
+          -ms-grid-column: 1;
+          -ms-grid-row: 2;
+        }
+        &:nth-child(3) {
+          -ms-grid-column: 1;
+          -ms-grid-row: 3;
+        }
+        &:nth-child(4) {
+          -ms-grid-column: 1;
+          -ms-grid-row: 4;
+        }
+      }
+    }
+  }
+
+  // Work
+  .item {
+    width: 100%;
+  }
+
+  // Contact
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          "name"
+          "email"
+          "subject"
+          "phone"
+          "message";
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 100% 1.2rem 100% 1.2rem 100% 1.2rem 100% 1.2rem 100%;
+
+        //Grid Areas
+        .name-input {
+          -ms-grid-column: 1;
+          -ms-grid-row: 1;
+        }
+        .subject-input {
+          -ms-grid-column: 1;
+          -ms-grid-row: 3;
+        }
+        .email-input {
+          -ms-grid-column: 1;
+          -ms-grid-row: 5;
+        }
+        .phone-input {
+          -ms-grid-column: 1;
+          -ms-grid-row: 7;
+        }
+        .message-input {
+          -ms-grid-column: 1;
+          -ms-grid-row: 9;
+        }
+      }
+    }
+    &-b {
+      .contact-info {
+        flex-wrap: wrap;
+        margin: -1.2rem 0;
+
+        div {
+          width: 100%;
+          padding: 1.2rem 0;
+          border-bottom: 1px #555 solid;
+        }
+      }
+    }
+    &-c {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  // Footer
+  #main-footer {
+    height: 7rem;
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+
+      .social .far:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+//Landscape
+@media (max-height: 580px) {
+  #header-home {
+    .header-content {
+      padding-top: 3rem;
+    }
+  }
+}
+@media (max-height: 330px) {
+  #header-home {
+    .header-content {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
