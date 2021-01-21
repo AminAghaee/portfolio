@@ -4,11 +4,21 @@
   "description": "Portfolio website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "babel": "./node_modules/.bin/babel javascript/ -w -d dist/js",
+    "dev": "concurrently \"npm run sass\" \"npm run babel\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "concurrently": "^5.3.0",
     "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "regenerator-runtime": "^0.13.7"
   }
 }
